@@ -1,0 +1,58 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="50%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Glow circle -->
+  <circle cx="600" cy="315" r="200" fill="#00d4ff" fill-opacity="0.1" filter="url(#glow)"/>
+  
+  <!-- WiFi Icon -->
+  <g transform="translate(520, 180)" filter="url(#glow)">
+    <path d="M80 80 C80 80, 80 90, 80 90" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M55 65 C68 52, 92 52, 105 65" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M35 45 C55 25, 105 25, 125 45" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M15 25 C45 -5, 115 -5, 145 25" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- ByteSpace Text -->
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold">
+    <tspan fill="url(#primaryGradient)">Byte</tspan><tspan fill="#ffffff">Space</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="430" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#888888">
+    Nairobi's Premier Tech Hub
+  </text>
+  
+  <!-- Services bar -->
+  <g transform="translate(200, 500)">
+    <rect x="0" y="0" width="800" height="60" rx="8" fill="#ffffff" fill-opacity="0.05"/>
+    <text x="400" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#00d4ff">
+      Internet • Printing • Repair • eCitizen • Design • Training
+    </text>
+  </g>
+</svg>
